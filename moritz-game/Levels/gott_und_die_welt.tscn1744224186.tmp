@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dnkessidyyjar"]
+
+[ext_resource type="Script" uid="uid://bc4s3nhqjmmv" path="res://Levels/MoritzScript.gd" id="1_838s0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oevnw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qxxva"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gf4w8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gf4w8"]
+
+[node name="GottUndDieWelt" type="Node3D" unique_id=304653873]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1568266985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6051272, 3.6461043)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=670842554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1934702696]
+shape = SubResource("BoxShape3D_oevnw")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=1170846286]
+mesh = SubResource("BoxMesh_qxxva")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=582590288]
+script = ExtResource("1_838s0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1559522444]
+shape = SubResource("CapsuleShape3D_gf4w8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1425969740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6498443, 0)
+mesh = SubResource("CapsuleMesh_gf4w8")
