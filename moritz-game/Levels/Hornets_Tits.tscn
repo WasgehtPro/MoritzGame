@@ -1,3 +1,45 @@
 [gd_scene format=3 uid="uid://drj6mi5chtne6"]
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_126ht"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gc2mg"]
+albedo_color = Color(0.2121912, 0.52175105, 0.24872145, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2k52m"]
+albedo_color = Color(0.29803923, 0.76862746, 0.3019608, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_126ht"]
+albedo_color = Color(0.28337204, 0.2054368, 0.13364875, 1)
+metallic = 1.0
+metallic_specular = 0.01
+
+[sub_resource type="PrismMesh" id="PrismMesh_126ht"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2rsb"]
+albedo_color = Color(0.66728747, 0.085723944, 0.19842714, 1)
+
 [node name="HornetsTits" type="Node3D" unique_id=988989802]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1660663584]
+mesh = SubResource("PlaneMesh_126ht")
+surface_material_override/0 = SubResource("StandardMaterial3D_gc2mg")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1579961958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026104093, -0.12220669, 0.04338698)
+size = Vector3(1.4151611, 0.32118225, 1.5135498)
+material = SubResource("StandardMaterial3D_2k52m")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=341536752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013307333, 0.03292477, 0.074656814)
+size = Vector3(1.2305298, 1.5012207, 1.3156738)
+material = SubResource("StandardMaterial3D_126ht")
+
+[node name="Front Door" type="CSGBox3D" parent="CSGBox3D2" unique_id=1314809174]
+transform = Transform3D(0.94019604, 0, 0, 0, 0.94019604, 0, 0, 0, 0.94019604, -0.02735928, 0.17452678, -0.6555482)
+operation = 2
+size = Vector3(0.2102356, 0.34824753, 0.043811798)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=361884215]
+transform = Transform3D(1.4188854, 0, 0, 0, 1.1548177, 0, 0, 0, 1.452858, 0, 1.2792373, 0.062395573)
+mesh = SubResource("PrismMesh_126ht")
+material = SubResource("StandardMaterial3D_d2rsb")
