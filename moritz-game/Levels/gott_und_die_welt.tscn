@@ -38,4 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4046941, 2)
 
 [node name="ReelsTrigger" parent="." unique_id=279504517 instance=ExtResource("2_dvxqt")]
 transform = Transform3D(1, 0, 0, 0, -1, 1.509958e-07, 0, -1.509958e-07, -1, 0, 1, 0)
+minCooldown = 1.0
+maxCooldown = 2.0
+maxPlayTime = 10.0
 showHitbox = true
