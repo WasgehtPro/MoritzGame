@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dnkessidyyjar"]
 
 [ext_resource type="PackedScene" uid="uid://w7abvn2a8k4w" path="res://Characters/Moritz.tscn" id="1_838s0"]
+[ext_resource type="PackedScene" uid="uid://d4lx85gilkxnr" path="res://Objects/ReelsTrigger/ReelsTrigger.tscn" id="2_dvxqt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qxxva"]
 
@@ -34,3 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 0.017555485, 0.9998459, 0, -0.9998459, 0.017
 
 [node name="Moritz" parent="." unique_id=1618802037 instance=ExtResource("1_838s0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4046941, 2)
+
+[node name="ReelsTrigger" parent="." unique_id=279504517 instance=ExtResource("2_dvxqt")]
+transform = Transform3D(1, 0, 0, 0, -1, 1.509958e-07, 0, -1.509958e-07, -1, 0, 1, 0)
+showHitbox = true

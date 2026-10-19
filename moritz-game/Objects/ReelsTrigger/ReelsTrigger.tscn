@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d4lx85gilkxnr"]
+
+[ext_resource type="Script" uid="uid://d0hoh1hn4h1cy" path="res://Objects/ReelsTrigger/reels_trigger.gd" id="1_vlykc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gf4w8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qxxva"]
+albedo_color = Color(0.15686275, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gf4w8"]
+material = SubResource("StandardMaterial3D_qxxva")
+
+[node name="ReelsTrigger" type="Area3D" unique_id=279504517]
+script = ExtResource("1_vlykc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1727557933]
+shape = SubResource("BoxShape3D_gf4w8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1370156556]
+transparency = 0.8
+mesh = SubResource("BoxMesh_gf4w8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1856415545]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1614984223]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/CenterContainer" unique_id=975418218]
+layout_mode = 2

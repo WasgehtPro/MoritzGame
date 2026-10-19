@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j3s18"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1618802037]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1618802037 groups=["Player"]]
 script = ExtResource("1_sjvqf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1485287674]
