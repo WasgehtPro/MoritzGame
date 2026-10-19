@@ -43,7 +43,6 @@ func _play_random_video() -> void:
 		return
 
 	var chosen: String = reelFolder.path_join(videos.pick_random()) ##"res://Reels/WheresLois.ogv"
-	print("Playing: ", chosen)  # if a video fails, this shows which file is bad
 
 	var stream := VideoStreamTheora.new()
 	stream.file = chosen
